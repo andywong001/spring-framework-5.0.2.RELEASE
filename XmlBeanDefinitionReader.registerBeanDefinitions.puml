@@ -1,0 +1,6 @@
+@startuml
+XmlBeanDefinitionReader -> XmlBeanDefinitionReader: registerBeanDefinitions(Document doc, Resource resource)
+XmlBeanDefinitionReader -> XmlBeanDefinitionReader: createBeanDefinitionDocumentReader()
+XmlBeanDefinitionReader -> BeanUtils: instantiateClass(DefaultBeanDefinitionDocumentReader.class)
+XmlBeanDefinitionReader <-- BeanUtils: BeanDefinitionDocumentReader
+@enduml

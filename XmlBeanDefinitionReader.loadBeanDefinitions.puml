@@ -1,0 +1,11 @@
+@startuml
+XmlBeanDefinitionReader -> XmlBeanDefinitionReader: loadBeanDefinitions(Resource resource)
+XmlBeanDefinitionReader -> XmlBeanDefinitionReader: loadBeanDefinitions(EncodedResource encodedResource)
+XmlBeanDefinitionReader -> XmlBeanDefinitionReader: doLoadBeanDefinitions(InputSource inputSource, Resource resource)
+XmlBeanDefinitionReader -> XmlBeanDefinitionReader: doLoadDocument(InputSource inputSource, Resource resource)
+XmlBeanDefinitionReader -> DocumentLoader: loadDocument(InputSource inputSource, EntityResolver entityResolver,ErrorHandler errorHandler, int validationMode, boolean namespaceAware)
+XmlBeanDefinitionReader -> XmlBeanDefinitionReader: registerBeanDefinitions(Document doc, Resource resource)
+XmlBeanDefinitionReader -> XmlBeanDefinitionReader: createBeanDefinitionDocumentReader()
+XmlBeanDefinitionReader -> BeanDefinitionRegistry: getBeanDefinitionCount()
+XmlBeanDefinitionReader -> BeanDefinitionDocumentReader: registerBeanDefinitions(Document doc, XmlReaderContext readerContext)
+@enduml
